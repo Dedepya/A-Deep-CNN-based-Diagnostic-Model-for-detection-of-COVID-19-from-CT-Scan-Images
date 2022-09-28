@@ -24,7 +24,8 @@ $ !pip install visualkeras
 
 
 # Output
-A real time CT-Scan image was taken and uploaded in the Google Colab. The trained model predicted the CT-Scan image correctly as COVID-19 positive patient. A real time CT-Scan images one is covid positive another is negative ware taken and uploaded in the Google Colab. The trained model predicted the CT-Scan images corre one as COVID-19 positive and another one as COVID-19 negative patient.
+A real time CT-Scan image was taken and uploaded in the Google Colab. The trained model predicted the outputs 99% accurately.
+
 ![covid](https://user-images.githubusercontent.com/48832097/192710695-36c39b8b-a228-4937-aad4-a31227ae96e7.png)
 
 ![negative](https://user-images.githubusercontent.com/48832097/192710656-2f6c683b-7746-48f4-92af-60fc27f95f93.png)
