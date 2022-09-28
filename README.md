@@ -6,9 +6,9 @@ Internationally, COVID-19 is spreading and has a high mortality rate. As a resul
 
 # Environment
 - Colab
-Numpy
-Pandas
-Seaborn
-Matplotlib
-Scikit-learn
+- Numpy
+- Pandas
+- Seaborn
+- Matplotlib
+- Scikit-learn
 
