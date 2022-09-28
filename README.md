@@ -14,7 +14,14 @@ Internationally, COVID-19 is spreading and has a high mortality rate. As a resul
 $ !pip install visualkeras
 
 # Data set
-Data was gathered from IEEE and performed pre-processing in Machine Learning Lab VNR VJIET.
+1152 CT scans were included in the data set, of which 576 belonged to COVID-19 patients and 576 to non-COVID-19 patients. Current Model is trained in a way that uses 920 images as training data and 232 images as testing data. Uniformity between positive and normal samples is being maintained in both train and test data. All of these images were gathered from Open source and are given due credit. An RT–PCR test was used to confirm the illness status of suspected individuals in this set. The CT scans of selected COVID-19 patients and their counterparts with probable illness are shown in the figure.
+
+![ct](https://user-images.githubusercontent.com/48832097/192731732-43282965-ca47-4090-86f8-d69194d4d5b1.png)
+
+# Convolutional Neural Network Model
+![Image](https://user-images.githubusercontent.com/48832097/192733045-c30f2a1d-27c3-4df2-a3eb-7c0038731d5e.jpeg)
+
+
 
 # Output
 ![covid](https://user-images.githubusercontent.com/48832097/192710695-36c39b8b-a228-4937-aad4-a31227ae96e7.png)
