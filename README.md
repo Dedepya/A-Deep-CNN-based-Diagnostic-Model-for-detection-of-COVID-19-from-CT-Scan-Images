@@ -7,8 +7,15 @@ Internationally, COVID-19 is spreading and has a high mortality rate. As a resul
 # Environment
 - Colab
 - Numpy
-- Pandas
-- Seaborn
 - Matplotlib
-- Scikit-learn
+- Keras
 
+# Setup
+$ !pip install visualkeras
+
+# Data set
+Data was gathered from IEEE and performed pre-processing in Machine Learning Lab VNR VJIET.
+
+# Output
+![negative](https://user-images.githubusercontent.com/48832097/192710656-2f6c683b-7746-48f4-92af-60fc27f95f93.png)
+![covid](https://user-images.githubusercontent.com/48832097/192710695-36c39b8b-a228-4937-aad4-a31227ae96e7.png)
