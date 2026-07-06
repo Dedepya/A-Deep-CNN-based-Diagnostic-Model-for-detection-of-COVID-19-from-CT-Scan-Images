@@ -1,0 +1,6 @@
+{
+  "name": "COVID-19 CT Scan CNN Classifier Showcase",
+  "description": "An interactive showcase and sandbox for a Keras-based Convolutional Neural Network (CNN) that classifies COVID-19 vs Normal chest CT scans with high accuracy, featuring training metrics and architecture details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
