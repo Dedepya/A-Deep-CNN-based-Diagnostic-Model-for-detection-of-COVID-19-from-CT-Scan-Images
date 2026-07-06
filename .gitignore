@@ -1,0 +1,7 @@
+# Ignore model weights and notebook checkpoints
+model.h5
+*.h5
+.env
+.ipynb_checkpoints/
+__pycache__/
+*.pyc

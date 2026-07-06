@@ -1,31 +1,53 @@
-# COVID-19-Detection
-Developed by @Dedeepya Yarlagadda @Siddarth Saxena @Madhavi Peechara @Niharika Sirapurapu
+CT Scan COVID-19 Detector — Gradio demo
 
-# Description
-Internationally, COVID-19 is spreading and has a high mortality rate. As a result, the WHO(World Health Organization) classified it as a pandemic. A rapid and correct diagnosis is necessary to reduce illness transmission. To recognize the illness, a converse record polymerase chain response (RT-PCR) test is oftentimes performed. In any case, since this test takes time, a chest registered tomography (CT) or plain chest X-Ray (CXR) is sporadically suggested. These are regarded problems, and a convolutional neural network will be built to replace these loops. Thus, we recommend a plan for making Artificial Intelligence calculations for COVID-19 discovery and ID that further develop the order capacity of COVID-19 cases. Rapid diagnosis of COVID-19 symptoms is the need of the hour and to this end, automated diagnosis has been preferred over manual diagnostic methodologies to effectively identify and combat the virus.
+This repository now contains a minimal Gradio demo that loads a Keras model and
+runs inference on uploaded CT scan images.
 
-# Environment
-- Colab
-- Numpy
-- Matplotlib
-- Keras
+Files added
+- app.py          -> Gradio app entrypoint
+- inference.py    -> Model loading & preprocessing helpers
+- requirements.txt-> Python dependencies
+- .gitignore      -> Ignore model files and checkpoints
 
-# Setup
-$ !pip install visualkeras
+Quick start (local)
+1. Export your trained Keras model from your notebook:
 
-# Data set
-1152 CT scans were included in the data set, of which 576 belonged to COVID-19 patients and 576 to non-COVID-19 patients. Current Model is trained in a way that uses 920 images as training data and 232 images as testing data. Uniformity between positive and normal samples is being maintained in both train and test data. All of these images were gathered from Open source and are given due credit. An RT–PCR test was used to confirm the illness status of suspected individuals in this set. The CT scans of selected COVID-19 patients and their counterparts with probable illness are shown in the figure.
+    ```python
+    model.save("model.h5")
+    ```
 
-![ct](https://user-images.githubusercontent.com/48832097/192731732-43282965-ca47-4090-86f8-d69194d4d5b1.png)
+2. Place `model.h5` in the repository root (next to `app.py`). By default the app
+   looks for `model.h5` but you can set a different path with the MODEL_PATH
+   environment variable.
 
-# Convolutional Neural Network Model
-![Image](https://user-images.githubusercontent.com/48832097/192733045-c30f2a1d-27c3-4df2-a3eb-7c0038731d5e.jpeg)
+3. Create a virtual environment and install deps:
 
+    python -m venv venv
+    source venv/bin/activate   # macOS / Linux
+    venv\Scripts\activate    # Windows
+    pip install -r requirements.txt
 
+4. Run the app:
 
-# Output
-A real time CT-Scan image was taken and uploaded in the Google Colab. The trained model predicted the outputs 99% accurately.
+    python app.py
 
-![covid](https://user-images.githubusercontent.com/48832097/192710695-36c39b8b-a228-4937-aad4-a31227ae96e7.png)
+The Gradio UI will be available at http://localhost:7860
 
-![negative](https://user-images.githubusercontent.com/48832097/192710656-2f6c683b-7746-48f4-92af-60fc27f95f93.png)
+Deployment
+- Hugging Face Spaces (Gradio): Create a new Space with Gradio, push these files,
+  and either commit `model.h5` to the repo (not recommended if large/private) or
+  modify `app.py` to download the model from a URL at startup.
+- Render / Railway / other: these platforms can run the app similarly; ensure
+  `MODEL_PATH` points to a file available at container startup.
+
+Notes & next steps
+- Edit `inference.py` to set the correct `IMG_SIZE` and `CLASS_NAMES` to match
+  how the model was trained.
+- If you prefer the demo to automatically download model weights at startup,
+  tell me where you'd like to host them (Google Drive, S3, or a GitHub release)
+  and I can add a small download step to `app.py`.
+
+If you'd like, I can now:
+- Add a small script to download weights from a URL at startup,
+- Add a demo/test image and a sample Grad-CAM visualization,
+- Or create a Hugging Face Space for you and push the working demo there.

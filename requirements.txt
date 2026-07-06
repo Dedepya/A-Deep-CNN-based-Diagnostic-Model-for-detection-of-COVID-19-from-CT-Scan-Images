@@ -1,0 +1,8 @@
+# Dependencies for running the Gradio demo
+
+gradio>=3.0
+Pillow
+numpy
+# Use TensorFlow only if you used Keras/TensorFlow in your notebook.
+# TensorFlow is large; if you used PyTorch instead, replace this line with 'torch'.
+tensorflow>=2.9.0
