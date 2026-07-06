@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 CT Scan Detector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+        
+        .description {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-size: 1em;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #f8f9fa;
+        }
+        
+        .deployment-info {
+            background: #e3f2fd;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .deployment-info h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        
+        .deployment-info p {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .deployment-info code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d32f2f;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 COVID-19 CT Scan Detector</h1>
+        <p class="subtitle">AI-Powered Diagnostic Model for CT Scan Analysis</p>
+        
+        <p class="description">
+            A deep convolutional neural network (CNN) based diagnostic model that leverages advanced machine learning 
+            to detect COVID-19 from CT scan images with high accuracy.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🧠 Deep Learning</h3>
+                <p>Advanced CNN architecture trained on thousands of CT scans</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Fast Inference</h3>
+                <p>Real-time predictions in seconds</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Accurate Results</h3>
+                <p>Optimized model for high diagnostic accuracy</p>
+            </div>
+            <div class="feature">
+                <h3>🔧 User-Friendly</h3>
+                <p>Easy-to-use web interface for medical professionals</p>
+            </div>
+        </div>
+        
+        <div class="cta-buttons">
+            <a href="https://huggingface.co/spaces/YOUR_USERNAME/COVID-19-CT-Detector" class="btn btn-primary">
+                🚀 Launch Web App
+            </a>
+            <a href="https://github.com/Dedepya/A-Deep-CNN-based-Diagnostic-Model-for-detection-of-COVID-19-from-CT-Scan-Images" class="btn btn-secondary">
+                📁 View on GitHub
+            </a>
+        </div>
+        
+        <div class="deployment-info">
+            <h3>📝 How to Use</h3>
+            <p><strong>Step 1:</strong> Upload a CT scan image (JPEG, PNG, or DICOM)</p>
+            <p><strong>Step 2:</strong> Click "Analyze" to run the model</p>
+            <p><strong>Step 3:</strong> View prediction results and confidence scores</p>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #1976d2;">
+                ⚠️ <strong>Disclaimer:</strong> This tool is for research and educational purposes. 
+                Always consult with qualified medical professionals for diagnosis.
+            </p>
+        </div>
+        
+        <footer>
+            <p>© 2024 COVID-19 CT Scan Detection Project | Developed with 🧬 Machine Learning</p>
+            <p>GitHub: <a href="https://github.com/Dedepya" style="color: #667eea;">Dedepya</a></p>
+        </footer>
+    </div>
+</body>
+</html>
