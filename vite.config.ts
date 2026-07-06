@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/A-Deep-CNN-based-Diagnostic-Model-for-detection-of-COVID-19-from-CT-Scan-Images/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
